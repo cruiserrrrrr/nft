@@ -54,6 +54,7 @@ body{
 
 }
 .search__form{
+	padding-left: 10px;
 	margin-left: 31px;
 	font-family: Poppins;
 	font-style: normal;
@@ -72,6 +73,7 @@ body{
 
 	background: #1B1A21;
 	border-radius: 10px;*
+	opacity: .7;
 }
 
 .search__form::placeholder{
@@ -240,10 +242,12 @@ body{
 	align-items: center;
 	padding: 17px 17px 10px 17px;
 	background: #000000;
-	box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 	border-radius: 38px;
 	cursor: pointer;
+	transition: .3s;
 }
+
 .btn__play{
 	justify-content: center;
 	align-items: center;
@@ -264,6 +268,43 @@ body{
 
 	color: #FFFFFF;
 }
+.canvas__dots{
+	position: absolute;
+	margin: 0;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sell{
 	margin-top: 123px;
@@ -316,6 +357,7 @@ body{
 	align-items: center;
 }
 .sell_item{
+	position: relative;
 	margin-top: 49px;
 	margin-left: 25px;
 
@@ -324,15 +366,26 @@ body{
 	align-items: center;
 	flex-direction: column;
 	width: 213px;
-	height: 280px;
+	height: 280px; 
+	cursor: pointer;
+
 
 	background: #202128;
 	border-radius: 20px;
+	filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+	transition: .3s;
+
 }
+.sell_item:hover{
+	filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.6));
+
+}
+
 .sell_item:first-child{
 	margin-left: 0;
 }
 .sell__number{
+
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -344,6 +397,7 @@ body{
 }
 
 .number__vaule{
+
 	font-family: poppins;
 	font-style: normal;
 	font-weight: 800;
@@ -431,24 +485,50 @@ body{
 
 .bids__items{
 	margin-top: 20px;
-	display: flex;
-	flex-wrap: wrap;
+
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	transition: .6s;
 }	
 
 .bids__item{
-	margin-top: 47px;
-	margin-left: 25px;
+	margin: 10px 12px ;
+	
 	width: 275px;
 	height: 428px;
 	background: #202128;
-	border-radius: 40px;
+	border-radius: 40px;	
+	transition: .6s;
+	cursor: pointer;
+	filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0.5));
+
+
 }
+
+
+.bids__item:hover{
+	margin-top: 0;
+	z-index: 2;
+	height: 436px;
+	width: 283px;
+	transform: scale(1.2);
+	filter: drop-shadow( 0 0 20px rgba(0, 0, 0, 1))
+	
+	
+}
+
+
+
+
+
+
 .bids__item:first-child{
-	margin-left: 0;
+	margin-left: 12px;
 }
 .bids__item:nth-child(5n){
-	margin-left: 0;
+	margin-left: 12px;
 }
+
 .five__bids{
 	margin-left: 0;
 }
@@ -459,6 +539,7 @@ body{
 
 .bids__item__info{
 	display: flex;
+	margin-top: 20px;
 }
 .bids__name{
 	margin: 10px 0 0 22px;
@@ -484,7 +565,9 @@ body{
 	width: 50%;
 }
 .bids__item__picture{
+	margin-top: ;
 	width: 50%;
+	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.9));
 }
 .bids__btn{
 	display: flex;
@@ -550,12 +633,36 @@ body{
 	background: #1B1A21;
 	border-radius: 10px;
 	border: none;
+	padding-left: 10px;
 
+
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 21px;
+
+	color: #FFFFFF;
+
+}
+.mail__form::placeholder{
+	margin-left: 5px;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 21px;
+
+	color: #FFFFFF;
+	opacity: .7;
+}
+.mail__form:hover{
+	border: none;
 }
 .mail__btn{
 	margin-left: -25px;
 	border: none;
-	padding: 10px 25px;
+	padding: 10px 25px 12px 25px;
 	background: linear-gradient(101.12deg, #EB1484 27.35%, #C91CC3 99.99%, #C81CC5 100%, #C81CC5 100%);
 	border-radius: 10px;
 
@@ -567,11 +674,12 @@ body{
 
 	color: #FFFFFF;
 	cursor: pointer;
-	transition: .2s;
+	transition: .5s;
 }
 .mail__btn:hover{
 	background: linear-gradient(101.12deg,  #C81CC5 27%, #C81CC5 99%,#EB1484 100%, #C91CC3 100%);
 }
+
 .main__footer__info__btn{
 	margin-left: 135px;
 	display: flex;
@@ -645,11 +753,17 @@ body{
 	height: 25px;
 	width: 27px;
 	cursor: pointer;
+	fill: #fff;
+	transition: .3s;
 }
 .social__icons:first-child{
 	width: 25px;
 	margin-left: 0;
 }
+.social__icons:hover{
+	fill: #EB1484;
+	filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.9));
+}
 
 
 
@@ -664,3 +778,324 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA-------------------------------------------------------*/
+/*MEDIA-------------------------------------------------------*/
+/*MEDIA-------------------------------------------------------*/
+/*MEDIA-------------------------------------------------------*/
+/*MEDIA-------------------------------------------------------*/
+@media(max-width: 1440px){
+	.container{
+		margin: 0 0;
+	}
+
+}
+@media(max-width: 1024px){
+	.container{
+		margin: 0 0;
+	}
+	.container__front{
+		margin: 0 60px;
+	}
+	.site__name{
+		margin-left: 30px;
+	}
+	.site__title{
+		margin: 6px 0 0 5px ;
+	}
+	.search__form{
+		width: 350px;
+		margin-left: 10px;
+	}
+	
+	.menu__items{
+		margin: 0 10px;
+	}
+	.menu__items:first-child{
+		margin-left: 10px;
+	}
+	.btn__items{
+		padding: 8px 16px;
+	}
+	.veiw__front{
+		padding-top: 45px;
+	}
+	.headline{
+		line-height: 120%;
+	}
+	.first__phone{
+		width: auto;
+		height: 10%;
+	}
+	.second__phone{
+		margin-left: 180px;
+	}
+	#intro__btn{
+		padding: 8px 26px;
+	}
+	.more{
+		margin-top: 45px;
+	}
+	.sell{
+		margin-top: 45px;
+	}
+	.sell_items{
+		display: grid;
+		grid-template-columns: repeat(4, 25%);
+		margin-left: 20px;
+	}
+	.sell_item{
+		margin: 25px 5px 0 5px;
+		filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.01));
+	}
+	.sell_item:last-child{
+		display: none;
+	}
+	.bids{
+		margin-top: 45px;
+	}
+	.bids__items{
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.bids__btn{
+		margin-top: 45px;
+	}
+	.footer{
+		margin-top: 45px;
+	}
+	.mail__form{
+		width: 240px;
+	}
+	.main__footer__info__btn{
+		margin-left: 45px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 420px){
+	.container{
+		margin: 0 0;
+	}
+	.header__container{
+		margin: 0 0;
+		padding: 0 5px;
+	}
+	.site__name{
+		margin: 0 0 0 15px;
+	}
+	.site__title{
+		margin-left: 10px;
+	}
+	.menu{
+		display: none;
+	}
+	.menu__btn{
+		display: none;
+	}
+	.search__form{
+		width: 200px;
+		margin: 0 10px;
+	}
+	.veiw__front{
+		padding-top: 15px;
+		text-align: center;
+	}
+	.container__front{
+		margin: 0 20px;
+	}
+	.intro_phone{
+		display: none;
+	}
+	.intro__left__side{
+		width: 100%;
+		position: relative;
+	}
+	.headline{
+		line-height: 120%;
+		font-size: 40px;
+	}
+	.intro__info{
+		height: auto;
+		width: auto;
+		margin-top: 10px;
+	}
+	.intro__btn__items{
+		margin-top: 25px;
+		justify-content: center;
+		align-items: center;
+		margin-left: 45px;
+	}
+	.more{
+		margin-top: 45px;
+		margin-left: 10px;
+	}
+	.sell{
+		margin-top: 25px;
+	}
+	.sell__info{
+		margin-top: 15px;
+		line-height: 20px;
+	}
+	.sell_items{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0 0 0 15px;
+
+	}
+	.sell_item{
+		width: 167px;
+		margin: 15px 0;
+		filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.001));
+
+	}
+	.sellers__name{
+		font-size: 16px;
+	}
+	.bids{
+		margin-top: 25px;
+
+	}
+	.bids__items{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		
+		justify-content: center;
+		align-items: center;
+
+	}
+	.bids__item{
+		padding: 15px 10px 15px 10px;
+		width: 167px;
+		height: auto;
+	}
+	.bids__item:hover{
+		transform: none;
+	}
+	.intro__btn__items{
+		margin-bottom: 25px;
+	}
+	#intro__btn{
+		padding: 16px 40px;
+	}
+	.btn__items{
+		padding: 16px 60px;
+	}
+	.item__picture{
+		width: 95%;
+		margin: 0 0;
+	}
+	.bids__item__info{
+		margin-top: 10px;
+	}
+	.nft__bids__info{
+		position: relative;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	.bids__name{
+		margin-left: 0;
+	}
+	.bids__vaule{
+		margin-left: 0;
+	}
+	.bids__item__picture{
+		display: none;
+	}
+	.footer{
+		margin-top: 25px;
+	}
+	.logo__footer{
+		margin-left: 140px;
+	}
+	.mail{
+		position: relative;
+		margin: 0 0;
+		padding-left: 10px;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer__main{
+		margin-top: 15px;
+	}
+	.footer__main__info{
+		margin-left: 30px;
+
+		margin-top: 15px;
+	}
+	.footer__form{
+		margin-top: 15px;
+		margin-left: 8px;
+	}
+	.main__footer__info__btn{
+		margin: 15px 10px;
+	}
+	.social__fotter{
+		display: flex;
+		margin: 0 0 ;
+		padding: 0 10px;
+	}
+	.site__info__name{
+		width: 200px;
+	}
+	.footer__headliner{
+		margin-bottom: 0;
+	}
+	.nft__atr__info{
+		margin-top: 5px;
+	}
+	.social{
+		position: relative;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
