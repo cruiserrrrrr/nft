@@ -679,7 +679,9 @@ body{
 .mail__btn:hover{
 	background: linear-gradient(101.12deg,  #C81CC5 27%, #C81CC5 99%,#EB1484 100%, #C91CC3 100%);
 }
-
+.fotter__low{
+	display: flex;
+}
 .main__footer__info__btn{
 	margin-left: 135px;
 	display: flex;
@@ -810,6 +812,13 @@ body{
 	}
 
 }
+
+
+
+
+
+
+
 @media(max-width: 1024px){
 	.container{
 		margin: 0 0;
@@ -827,7 +836,12 @@ body{
 		width: 350px;
 		margin-left: 10px;
 	}
-	
+	.intro{
+		position: relative;
+	}
+	.intro__info{
+		max-width: 500px;
+	}
 	.menu__items{
 		margin: 0 10px;
 	}
@@ -842,6 +856,9 @@ body{
 	}
 	.headline{
 		line-height: 120%;
+	}
+	.intro_phone{
+		display: flex;
 	}
 	.first__phone{
 		width: auto;
@@ -895,23 +912,268 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media(max-width: 420px){
+@media(max-width: 768px){
 	.container{
 		margin: 0 0;
+	}
+	.header__container{
+		margin: 0 0;
+		padding: 0 5px;
+	}
+	.site__name{
+		margin: 0 0 0 15px;
+	}
+	.site__title{
+		margin-left: 5px;
+	}
+	.menu{
+		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.menu__items{
+		margin: 0 5px;
+		font-size: 12px;
+	}
+	.menu__items:first-child{
+		margin-left: 0;
+	}
+	.menu__btn{
+		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.btn__items:last-child{
+		margin-left: 5px;
+	}
+	.search__form{
+		width: 200px;
+		margin: 0 10px;
+	}
+	
+	.veiw__front{
+		padding-top: 15px;
+		text-align: center;
+	}
+	.container__front{
+		margin: 0 20px;
+	}
+	.intro_phone{
+		display: none;
+	}
+	.intro__left__side{
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+	.headline{
+		line-height: 120%;
+		font-size: 40px;
+		text-align: center;
+		flex-direction: column;
+
+
+	}
+	.intro__info{
+		height: auto;
+		width: auto;
+		margin-top: 10px;
+		text-align: center;
+		flex-direction: column;
+
+
+	}
+	.intro__btn__items{
+		margin-top: 25px;
+		justify-content: center;
+		align-items: center;
+		margin-left: 45px;
+	}
+	.more{
+		margin-top: 45px;
+		margin-left: 10px;
+	}
+	.sell{
+		margin-top: 25px;
+	}
+	.sell__info{
+		margin-top: 15px;
+		line-height: 20px;
+	}
+	.sell_items{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding: 0 0 0 15px;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	.sell_item{
+		width: 215px;
+		margin: 15px 0;
+		filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.001));
+
+	}
+	.sell_item:last-child{
+		display: block;
+	}
+
+	.sellers__name{
+		font-size: 16px;
+	}
+	.bids{
+		margin-top: 25px;
+
+	}
+	.bids__items{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		
+		justify-content: center;
+		align-items: center;
+		margin-left: 50px;
+
+	}
+	.bids__item{
+		padding-top: 20px;
+	
+		width: 275px;
+		height: 428px;
+		background: #202128;
+		border-radius: 40px;	
+		transition: .6s;
+		cursor: pointer;
+		filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0.5));
+	}
+	.bids__item:hover{
+		transform: none;
+	}
+
+	.intro__btn__items{
+		margin-bottom: 25px;
+	}
+	#intro__btn{
+		padding: 16px 40px;
+	}
+	.btn__items{
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+	.item__picture{
+		width: 85%;
+		margin: 0 0;
+	}
+	.bids__item__info{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.nft__bids__info{
+		position: relative;
+		justify-content: center;
+		align-items: center;
+	}
+	.bids__name{
+		margin-left: 0;
+	}
+	.bids__vaule{
+		margin-left: 0;
+	}
+	.bids__item__picture{
+		display: block;
+		overflow: hidden;
+	}
+	.footer{
+		margin-top: 25px;
+	}
+	.logo__footer{
+		margin-top: 20px;
+		margin-left: 140px;
+	}
+	.mail{
+		margin-top: 40px;
+		position: relative;
+		margin: 0 0;
+		padding-left: 10px;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer__main{
+		margin-top: 15px;
+	}
+	.footer__main__info{
+		margin-left: 30px;
+
+		margin-top: 15px;
+	}
+	.footer__form{
+		margin-top: 15px;
+		margin-left: 8px;
+	}
+	.main__footer__info__btn{
+		margin: 15px 10px;
+	}
+	.social__fotter{
+
+		position: relative;
+		display: flex;
+		margin: 0 0 0 0;
+		padding: 0 10px;
+	}
+	.site__info__name{
+		width: 200px;
+	}
+	.footer__headliner{
+		margin-bottom: 0;
+	}
+	.nft__atr__info{
+		margin-top: 5px;
+	}
+	.social{
+		margin-left: 60px;
+		margin-top: 20px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	.social__items{
+		margin-left: 5px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 425px){
+	.header{
+		width: 100%;
+		position: fixed;
+		z-index: 50;
+		background: #202128;
+	}
+	.container{
+		margin: 0 0;
+	}
+	.container__front{
+		padding-top: 92px;
 	}
 	.header__container{
 		margin: 0 0;
@@ -977,6 +1239,7 @@ body{
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		padding: 0 0 0 15px;
+		margin-left: 0;
 
 	}
 	.sell_item{
@@ -998,6 +1261,7 @@ body{
 		
 		justify-content: center;
 		align-items: center;
+		margin: 0 0;
 
 	}
 	.bids__item{
@@ -1062,7 +1326,7 @@ body{
 	}
 	.footer__form{
 		margin-top: 15px;
-		margin-left: 8px;
+		margin-left: 30px;
 	}
 	.main__footer__info__btn{
 		margin: 15px 10px;
@@ -1086,16 +1350,126 @@ body{
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+@media(max-width: 375px){
+	.intro__btn__items{
+		margin: 30px 0 0 0 ;
+	}
+	.sell_items{
+		padding: 0 0;
+	}
+	.sell_item{
+		margin: 5px 5px;
+	}
+	.sell_item:last-child{
+		display: none;
+	}
+	.bids__items{
+		margin: 0 0;
+	}
+	.bids__item{
+		margin: 5px 5px;
+	}
+	.bids__item:first-child{
+		margin: 5px 5px;
+	}
+	.bids__item:nth-child(5n){
+		margin: 5px 5px;
+	}
+	.bids__item:hover{
+		transform: none;
+	}
+
+	.bids__btn{
+		margin-bottom: 60px;
+	}
+	.mail{
+		padding: 0 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.footer__main{
+
+	}
+	.logo__footer{
+		margin: 5px 0;
+	}
+	.footer__main__info{
+		margin: 5px 0;
+	}
+	.footer__form{
+		margin: 5px 0;
+	}
+	.fotter__low{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.main__footer__info__btn{
+		margin: 25px 10px 10px 35px;
+	}
+	.main__footer__info__btn:last-child{
+		margin-left: 50px;
+	}
+	.site__info{
+		margin-top: 15px;
+	}
+	.social{
+		margin: 0 0 0 15px;
+		display: flex;
+		align-items: center;
+
+	}
+
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
