@@ -1,3 +1,5 @@
+
+// LOAD MORE BTN ---------------------------------------
 document.getElementsByClassName("btn__bids")[0].onclick = () => {
             document.getElementById("bids__items").innerHTML += `
             				<div class="bids__item">
@@ -53,15 +55,7 @@ document.getElementsByClassName("btn__bids")[0].onclick = () => {
 							</div>`;
             return false;
         };
-
-
-
-
-
-
-
-
-
+// OPEN SEARCH -------------------------------------
 	document.getElementById('search__icon').onclick = function() {
 	document.getElementById('header').classList.add('header__none');	
 
@@ -74,14 +68,16 @@ document.getElementsByClassName("btn__bids")[0].onclick = () => {
 	document.getElementById('search').classList.add('search__active__mob');
 
 	}
+// CLOSE SEARCH --------------------------------------
+	const btn_2 = document.getElementById('close__btn')
+	btn_2.onclick = function() {
+
+	document.getElementById('mobile__search__act').classList.remove("search__active__mob");
+	document.getElementById('header').classList.remove("header__none");;
+	}
 
 
-
-	// const btn = document.getElementById('close__popup')
-	// btn.onclick = function() {
-
-	// document.getElementById('ggit_popup').classList.remove("popup_open");
-
+	
 
 
 
